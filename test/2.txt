@@ -1,5 +1,3 @@
 <speak>
-<mark name=begin>
 こんにちは。<break time="500ms"/> 私の名前は森若です。
-<mark name=end>
 </speak>
