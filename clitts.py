@@ -2,6 +2,9 @@
 # Copyright 2021 Google Inc.
 # Copyright 2021 Kazuo Moriwaka <moriwaka@gmail.com>
 
+LANG="ja-JP"
+VOICENAME="ja-JP-Wavenet-D"
+
 def synthesize(inputtext, outfile, isssml):
     """Synthesizes speech from the input string of ssml.
 
@@ -22,9 +25,8 @@ def synthesize(inputtext, outfile, isssml):
     # Note: the voice can also be specified by name.
     # Names of voices can be retrieved with client.list_voices().
     voice = texttospeech.VoiceSelectionParams(
-        language_code="ja-JP",
-        name="ja-JP-Wavenet-D",
-        ssml_gender=texttospeech.SsmlVoiceGender.MALE,
+        language_code=LANG,
+        name=VOICENAME,
     )
 
     audio_config = texttospeech.AudioConfig(
