@@ -2,8 +2,9 @@
 # Copyright 2021 Google Inc.
 # Copyright 2021 Kazuo Moriwaka <moriwaka@gmail.com>
 
-LANG="ja-JP"
-VOICENAME="ja-JP-Wavenet-D"
+LANG = "ja-JP"
+VOICENAME = "ja-JP-Wavenet-D"
+
 
 def synthesize(inputtext, outfile, isssml):
     """Synthesizes speech from the input string of ssml.
@@ -42,12 +43,17 @@ def synthesize(inputtext, outfile, isssml):
         out.write(response.audio_content)
         print(f'Audio content written to file {outfile}')
 
+
 if __name__ == '__main__':
     import argparse
-    parser = argparse.ArgumentParser(description='Generate mp3 from SSML or Text')
-    parser.add_argument('--ssml', action='store_true', default=False, help='input is SSML')
-    parser.add_argument(metavar='input.txt', dest='inputfile', help='input text file')
-    parser.add_argument(metavar='output.mp3', dest='output', help='output mp3 file')
+    parser = argparse.ArgumentParser(
+        description='Generate mp3 from SSML or Text')
+    parser.add_argument('--ssml', action='store_true',
+                        default=False, help='input is SSML')
+    parser.add_argument(metavar='input.txt',
+                        dest='inputfile', help='input text file')
+    parser.add_argument(metavar='output.mp3',
+                        dest='output', help='output mp3 file')
 
     args = parser.parse_args()
     with open(args.inputfile, 'r') as f:
