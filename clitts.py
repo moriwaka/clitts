@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# Copyright 2021 Google Inc.
+# Copyright 2021 Kazuo Moriwaka <moriwaka@gmail.com>
 
 def synthesize(inputtext, outfile, isssml):
     """Synthesizes speech from the input string of ssml.
